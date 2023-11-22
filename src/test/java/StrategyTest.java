@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class StrategyTest {
     @Test
     public void testStandardStrategy() {
-        Strategy strategy = StandardStrategy();
+        Strategy strategy = new StandardStrategy();
         double weight = 1.4;
         double price = strategy.calculatePrice(weight);
         assertEquals(weight * 2.5, price, 0.0001);
@@ -16,7 +16,7 @@ public class StrategyTest {
 
     @Test
     public void testExpressStrategy() {
-        Strategy strategy = ExpressStrategy();
+        Strategy strategy = new ExpressStrategy();
         double weight = 1.6;
         double price = strategy.calculatePrice(weight);
         assertEquals(weight * 3.5, price, 0.0001);
