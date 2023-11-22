@@ -1,7 +1,9 @@
 package edu.sharif.sel.state;
 
+import edu.sharif.sel.Package;
+
 abstract public class State {
-    private Package pkg;
+    protected Package pkg;
 
     public State(Package pkg) {
         this.pkg = pkg;
@@ -10,4 +12,6 @@ abstract public class State {
     abstract public String getMessage();
 
     abstract public void next();
+
+    abstract public boolean end();
 }
